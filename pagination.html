@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>分页演示</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <ul class="pagination"></ul>
+<!--   <script>
+      var current=12;
+      var total=12;
+      var show=7;
+      var mid=Math.floor(show/2);
+      var begin=begin<1?1:current-mid;
+      var end=current+mid;
+      if(end>total){
+            end=total;
+            begin=end-show;
+            begin=begin<1?1:begin;
+      }
+      var pages=document.getElementsByTagName('ul')[0];
+      var pre=document.createElement("li");
+      pre.innerHTML='<a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>';
+      if(current==1){
+            pre.classList.add("disabled");
+      }
+      pages.appendChild(pre);
+      for(var i=begin;i<end+1;i++){
+                var newli=document.createElement("li");
+                newli.innerHTML='<a href="#">' + i + '</a>';
+                pages.appendChild(newli);
+                if(i==current){
+                    newli.classList.add('active');
+                }
+      }
+      var final=document.createElement("li");
+      final.innerHTML='<a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>';
+      pages.appendChild(final);
+      if(current==total){
+            final.classList.add("disabled");
+      }
+  </script> -->
+  <script src="node_modules/seajs/dist/sea.js"></script>
+  <script>
+  var pages=document.getElementsByTagName('ul')[0];
+      seajs.config({
+      alias: {
+        main: './main.js'
+      }
+    });
+    seajs.use('main');
+  </script>
+</body>
+
+</html>
